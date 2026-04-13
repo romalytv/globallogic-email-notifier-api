@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Release Notifier</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+
+<h1>GitHub Release Notifier</h1>
+
+<section>
+    <h2>Subscribe to Updates</h2>
+    <form id="subscribeForm">
+        <div>
+            <label for="subEmail">Your Email:</label><br>
+            <input type="email" id="subEmail" required placeholder="example@mail.com">
+        </div>
+        <br>
+        <div>
+            <label for="repo">Repository (owner/repo):</label><br>
+            <input type="text" id="repo" required placeholder="vuejs/core">
+        </div>
+        <br>
+        <button type="submit" id="subBtn">Subscribe</button>
+    </form>
+    <p id="subMsg"></p>
+    <h4>Suggested Repositories (click to select):</h4>
+    <ul id="suggestedList">
+    </ul>
+</section>
+
+<hr>
+<section>
+    <h2>My Subscriptions</h2>
+    <p>Enter your email to see the list of your active subscriptions:</p>
+    <input type="email" id="viewEmail" placeholder="Enter your email">
+    <button id="viewBtn">Show My List</button>
+
+    <div id="viewMsg" style="margin-top: 10px; font-weight: bold;"></div>
+    <ul id="subscriptionsList">
+    </ul>
+</section>
+<script src="./index.js"></script>
+</body>
+</html>
